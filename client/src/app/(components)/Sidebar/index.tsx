@@ -3,6 +3,7 @@
 import { useAppDispatch, useAppSelector } from '@/app/redux';
 import { setIsSidebarCollapsed } from '@/state';
 import { Archive, CircleDollarSign, Clipboard, Layout, LucideIcon, Menu, SlidersHorizontal, User } from 'lucide-react'
+import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React from 'react'
@@ -70,7 +71,13 @@ const Sidebar = () => {
                     isSidebarCollapsed ? "px-5" : "px-8"}
                 }`}
             >
-                <div>logo</div>
+                <Image
+                    src="https://s3-mystock.s3.us-east-1.amazonaws.com/logo.png"
+                    alt={"Logo"}
+                    width={27}
+                    height={27}
+                    className="rounded w-8"                   
+                />
                 <h1 className={`font-extrabold text-2xl ${
                         isSidebarCollapsed ? "hidden" : "block"
                     }`}
